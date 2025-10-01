@@ -170,6 +170,16 @@ Training metrics are automatically saved to `models/<env>_<timestamp>/`:
 - `checkpoint_ep*.pt`: Periodic model checkpoints for recovery and analysis
 - `final_model.pt`: Final trained model weights
 
+### Training Visualizations
+
+The training process generates comprehensive plots showing:
+- **Training Rewards**: Episode rewards over time with moving average
+- **Evaluation Rewards**: Performance without exploration (epsilon=0) 
+- **Training Loss**: MSE loss between predicted and target Q-values
+- **Epsilon Decay**: Exploration rate reduction over episodes
+
+These visualizations help monitor learning progress and identify training issues. See the generated `training_results.png` files in your model directories for examples of successful training curves.
+
 ## Troubleshooting
 
 ### Agent Not Learning
